@@ -24,7 +24,8 @@ st.title ("Datasweeper sterling integrator")
 st.write ("Transform your file between CSV and excel ")
 
 #File uploader 
-uploaded_files=st.file_uploader ("upload your files (accepts CSV or Excels):" , type= [ "csv","xsls"], accept_multiple_files={True} )
+uploaded_files=st.file_uploader ("upload your files (accepts CSV or Excels):" , type= [ "cvs","xlsx"], accept_multiple_files=(True) )
+
 if uploaded_files:
     for file in uploaded_files:
         file_ext = os.path.splitext (file.name) [-1] .lowercase
